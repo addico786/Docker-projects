@@ -1,6 +1,3 @@
-import tkinter as tk
-from tkinter import messagebox
-
 menu = {
     'pizza': 100,
     'salad': 150,
@@ -9,60 +6,37 @@ menu = {
     'fries': 180
 }
 
+print("Greetings, fellow customer! Please choose something from the menu:\n")
+
+# Display the menu
+for item, price in menu.items():
+    print(f"{item.capitalize()}: ${price}")
+
 order_total = 0
-selected_items = []
 
-def add_to_order():
-    global order_total
-    item1 = entry_item1.get().lower()
-    item2 = entry_item2.get().lower()
-    
-    items_to_check = [item1, item2]
-    added = False
+# Keep taking orders until valid item is chosen
+while True:
+    item_1 = input("\nEnter the name of the item you want to order: ").lower()
+    item_2 = input("Enter the second item you want to order: ").lower()
 
-    for item in items_to_check:
-        if item in menu:
-            order_total += menu[item]
-            selected_items.append(item)
-            added = True
-        else:
-            messagebox.showwarning("Invalid item", f"'{item}' is not on the menu.")
-            return
-    
-    if added:
-        messagebox.showinfo("Item Added", f"Items added: {', '.join(items_to_check)}")
-        label_total.config(text=f"Total: ${order_total}")
-        entry_item1.delete(0, tk.END)
-        entry_item2.delete(0, tk.END)
+    valid = False
 
-# GUI Setup
-window = tk.Tk()
-window.title("Menu Ordering System")
-window.geometry("400x400")
-window.configure(bg="#f9f9f9")
+    if item_1 in menu:
+        order_total += menu[item_1]
+        print(f"Your item '{item_1}' has been added to the basket.")
+        valid = True
+    else:
+        print(f"'{item_1}' is not on the menu. Try again.")
 
-# Greeting
-tk.Label(window, text="Greetings fellow customer!", font=("Helvetica", 14), bg="#f9f9f9").pack(pady=10)
-tk.Label(window, text="Please choose something from the menu:", bg="#f9f9f9").pack()
+    if item_2 in menu:
+        order_total += menu[item_2]
+        print(f"Your item '{item_2}' has been added to the basket.")
+        valid = True
+    else:
+        print(f"'{item_2}' is not on the menu. Try again.")
 
-# Menu Display
-menu_text = "\n".join([f"{item}: ${price}" for item, price in menu.items()])
-tk.Label(window, text=menu_text, font=("Courier", 12), bg="#f0f0f0", justify="left").pack(pady=10)
+    if valid:
+        break
 
-# Entry fields
-entry_item1 = tk.Entry(window, width=30)
-entry_item1.pack(pady=5)
-entry_item1.insert(0, "Enter first item")
+print(f"\nYour total is: ${order_total}")
 
-entry_item2 = tk.Entry(window, width=30)
-entry_item2.pack(pady=5)
-entry_item2.insert(0, "Enter second item")
-
-# Order Button
-tk.Button(window, text="Add to Order", command=add_to_order).pack(pady=15)
-
-# Total Label
-label_total = tk.Label(window, text="Total: $0", font=("Helvetica", 12), bg="#f9f9f9")
-label_total.pack()
-
-window.mainloop()
