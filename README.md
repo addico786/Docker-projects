@@ -23,9 +23,23 @@ When run, the app simply prints:
 
 ```bash
 docker build -t hello-python-app .
+```
+---
+## ▶️ Run the Container
+```bash
+docker run hello-python-app
+```
+---
 
+## 🧰 Technologies Used
+1:Python 3.11 (slim image)
+2:Docker
 
+---
+
+## 🔖 License
 This project is open source and free to use.
+
 ---
 
 Let me know if you ever expand it again — I’ll tailor the README accordingly.
