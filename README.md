@@ -31,7 +31,7 @@ docker run hello-python-app
 ```
 ---
 
-## 🧰 Technologies Used
+##  Technologies Used
 1:Python 3.11 (slim image)
 2:Docker
 
