@@ -11,7 +11,7 @@ When run, the app simply prints:
 
 ---
 
-## 🚀 Getting Started
+##  Getting Started
 
 ### 🔧 Prerequisites
 
