@@ -37,7 +37,7 @@ docker run hello-python-app
 
 ---
 
-## 🔖 License
+##  License
 This project is open source and free to use.
 
 ---
