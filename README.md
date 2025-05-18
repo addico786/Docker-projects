@@ -19,7 +19,7 @@ When run, the app simply prints:
 
 ---
 
-### 🛠 Build the Docker Image
+###  Build the Docker Image
 
 ```bash
 docker build -t hello-python-app .
