@@ -13,7 +13,7 @@ When run, the app simply prints:
 
 ##  Getting Started
 
-### 🔧 Prerequisites
+###  Prerequisites
 
 - Docker installed on your system
 
