@@ -4,7 +4,7 @@ This is a basic Python application that prints a message to the terminal. The ap
 
 ---
 
-## 📝 What It Does
+##  What It Does
 
 When run, the app simply prints:
 
