@@ -25,7 +25,7 @@ When run, the app simply prints:
 docker build -t hello-python-app .
 ```
 ---
-## ▶️ Run the Container
+##  Run the Container
 ```bash
 docker run hello-python-app
 ```
