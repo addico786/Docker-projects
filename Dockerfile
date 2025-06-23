@@ -2,7 +2,7 @@ FROM python:3.11-slim
 
 WORKDIR /python-app
 
-COPY menu.py .
+COPY hello.py .
 
 RUN apt-get update
 RUN apt-get install -y python3-tk
